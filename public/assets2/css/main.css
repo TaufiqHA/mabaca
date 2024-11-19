@@ -171,13 +171,13 @@ h6 {
 }
 
 .scrolled .header {
-  box-shadow: 0px 0 18px rgb(241, 241, 241);
+  box-shadow: 0px 0 18px rgba(48, 48, 48, 0.833);
 }
 
 /* Global Header on Scroll
 ------------------------------*/
 .scrolled .header {
-  --background-color: rgb(255, 255, 255);
+  --background-color: rgb(48, 48, 48, 0.833);
 }
 
 /*--------------------------------------------------------------
