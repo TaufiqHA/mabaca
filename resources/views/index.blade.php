@@ -179,7 +179,7 @@
               <div>
                 <h3>OPAC</h3>
                 <p>Layanan Peminjaman, Perpanjangan, dan Pengembalian koleksi bahan pustaka</p>
-                <a href="service-details.html" class="read-more">Selengkapnya <i class="bi bi-arrow-right"></i></a>
+                <a href="https://opac-smpn9makassar.site/" class="read-more">Selengkapnya <i class="bi bi-arrow-right"></i></a>
               </div>
             </div>
           </div><!-- End Service Card -->
