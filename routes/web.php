@@ -15,5 +15,6 @@ Route::get('/blog', function () {
 
 Route::get('/blog-detail/{id}', function ($id) {
     $blog = Blog::where('id', $id)->first();
-    return view('blog-details', ['blog' => $blog]);
+    $blogs = Blog::limit(5)->get();
+    return view('blog-details', ['blog' => $blog, 'blogs' => $blogs]);
 })->name('blog');
