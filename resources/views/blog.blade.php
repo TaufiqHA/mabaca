@@ -49,7 +49,7 @@
 
       <nav id="navmenu" class="navmenu">
         <ul>
-          <li><a href="/#hero">Beranda</a></li>
+          <li><a href="/#hero">Home</a></li>
           <li><a href="/#about">Tentang</a></li>
           <li><a href="/#services">Layanan</a></li>
           <li><a href="/#pricing">Organisasi</a></li>
