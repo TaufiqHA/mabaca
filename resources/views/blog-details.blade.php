@@ -4,12 +4,12 @@
 <head>
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
-  <title>Blog Details - Tempo Bootstrap Template</title>
+  <title>Blog - Perpustakaan Mabaca Mannennungeng</title>
   <meta name="description" content="">
   <meta name="keywords" content="">
 
   <!-- Favicons -->
-  <link href="assets2/img/favicon.png" rel="icon">
+  <link href="{{ asset('assets/img/logo mabaca.png') }}" rel="icon">
   <link href="assets2/img/apple-touch-icon.png" rel="apple-touch-icon">
 
   <!-- Fonts -->
@@ -68,8 +68,7 @@
     <!-- Page Title -->
     <div class="page-title dark-background" style="background-image: url({{ asset('assets2/img/page-title-bg.webp') }});">
       <div class="container position-relative">
-        <h1>Blog Details</h1>
-        <p>Esse dolorum voluptatum ullam est sint nemo et est ipsa porro placeat quibusdam quia assumenda numquam molestias.</p>
+        <h1>{{ $blog->judul }}</h1>
       </div>
     </div><!-- End Page Title -->
 
@@ -87,8 +86,6 @@
                 <div class="post-img">
                   <img src="{{ asset("storage/".$blog->thumbnile) }}" alt="" class="img-fluid">
                 </div>
-
-                <h2 class="title">{{ $blog->judul }}</h2>
 
                 <div class="meta-top">
                   <ul>
