@@ -44,7 +44,7 @@
       <a href="index.html" class="d-flex align-items-center me-auto me-xl-0">
         <!-- Uncomment the line below if you also wish to use an image logo -->
         <!-- <img src="assets/img/logo.png" alt=""> -->
-        <img class="sitename" src="assets/img/logo mabaca.png"></img>
+        <img src="{{ asset('assets/img/logo mabaca hitam.png') }}" style="max-height: 50px"></img>
       </a>
 
       <nav id="navmenu" class="navmenu">
@@ -113,7 +113,7 @@
             <p class="about-description">Perpustakaan Mabaca Manennungeng UPT SPF SMP NEGERI 9 Makassar berdiri sejak tahun 1999, Dengan nomor pokok perpustakaan (NPP) 7371111D1000004 dan menempati gedung tersendiri seluas 359,12 m2. 
               Perpustakaan di UPT SPF SMPN 9 Makassar memiliki fasilitas yang cukup memadai antara lain Ac, Televisi, Layar proyektor, Komputer, LCD, Kipas angin, Printer dan Foto copy.
               
-              Adapun jenis koleksinya sebanyak 2.500 Judul dan 3.900 Eksemplar yaitu terdiri dari buku paket, buku fiksi dan non fiksi, referensi dan digital.
+              Adapun jenis koleksinya sebanyak 3.000 Judul dan 4.230 Eksemplar yaitu terdiri dari buku paket, buku fiksi dan non fiksi, referensi dan digital.
               
               Struktur organisasi perpustakaan UPT SPF SMPN 9 Makassar antara lain : terdiri dari Kepala sekolah, kepala perpustakaan, Pelayanan teknis, Pelayanan pemustaka, dan TIK.</p>
 
@@ -323,7 +323,7 @@
                 </div>
                 <div class="content">
                   <h4>Email</h4>
-                  <p>mabacasmpn9makassar@gmail.com</p>
+                  <p>perpussmpn9mks@gmail.com</p>
                 </div>
               </div>
 
@@ -359,7 +359,7 @@
       <div class="row gy-4">
         <div class="col-lg-6 col-md-6 footer-about">
           <a href="index.html" class="d-flex align-items-center">
-            <img class="sitename" src="assets/img/logo mabaca.png"></img>
+            <img class="sitename" src="{{ asset('assets/img/logo mabaca hitam.png') }}" style="max-height: 50px"></img>
           </a>
           <div class="footer-contact pt-3">
             <p>Kami menyediakan beragam informasi untuk warga UPT SPF SMPN 9 Makassar. Terus update kegiatan - kegiatan kami di media sosial.
@@ -389,7 +389,7 @@
           <h4>Hubungi Kami</h4>
           <p>Jl. Ir. Soetami No.26 Bulurokeng Makassar</p>
           <p><span class="fw-bold">Telepon: </span>0822-9272-4200</p>
-          <p><span class="fw-bold">Email: </span>mabacasmpn9makassar@gmail.com</p>
+          <p><span class="fw-bold">Email: </span>perpussmpn9mks@gmail.com</p>
         </div>
 
       </div>
@@ -397,13 +397,6 @@
 
     <div class="container copyright text-center mt-4">
       <p>© <span>Copyright</span> <strong class="px-1 sitename">iLanding</strong> <span>All Rights Reserved</span></p>
-      <div class="credits">
-        <!-- All the links in the footer should remain intact. -->
-        <!-- You can delete the links only if you've purchased the pro version. -->
-        <!-- Licensing information: https://bootstrapmade.com/license/ -->
-        <!-- Purchase the pro version with working PHP/AJAX contact form: [buy-url] -->
-        Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
-      </div>
     </div>
 
   </footer>
