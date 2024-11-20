@@ -85,7 +85,7 @@
               <article class="article">
 
                 <div class="post-img">
-                  <img src="{{ asset($blog->thumbnile) }}" alt="" class="img-fluid">
+                  <img src="{{ asset("storage/".$blog->thumbnile) }}" alt="" class="img-fluid">
                 </div>
 
                 <h2 class="title">{{ $blog->judul }}</h2>
