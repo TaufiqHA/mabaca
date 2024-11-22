@@ -290,7 +290,7 @@
 
       <div class="container" data-aos="zoom-in" data-aos-delay="100">
 
-        <div id="tree"></div>
+        <div id="tree" style="pointer-events: none;"></div>
         <script>
           function updateScale(chart) {
               // Deteksi apakah layar berukuran mobile
