@@ -36,7 +36,7 @@
   {{-- js file --}}
   <script src="https://balkan.app/js/OrgChart.js"></script>
 
-  @vite(['assets3/css/main.css'])
+  {{-- @vite(['assets3/css/main.css']) --}}
 
   <!-- =======================================================
   * Template Name: Append
