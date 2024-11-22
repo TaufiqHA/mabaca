@@ -18,3 +18,7 @@ Route::get('/blog-detail/{id}', function ($id) {
     $blogs = Blog::limit(5)->get();
     return view('blog-details', ['blog' => $blog, 'blogs' => $blogs]);
 })->name('blog');
+
+Route::get('/append', function () {
+    return view('append', ['name' => 'taufiq hidayah abdullah']);
+});
