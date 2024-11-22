@@ -2871,7 +2871,7 @@ section,
   pointer-events: none; /* Default untuk mobile */
 }
 
-@media (min-width: 768px) {
+@media (min-width: 968px) {
   #tree {
       pointer-events: auto; /* Aktifkan interaksi untuk desktop */
   }
