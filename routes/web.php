@@ -20,5 +20,6 @@ Route::get('/blog-detail/{id}', function ($id) {
 })->name('blog');
 
 Route::get('/append', function () {
-    return view('append', ['name' => 'taufiq hidayah abdullah']);
+    $blogs = Blog::limit(3)->orderBy('created_at', 'desc')->get();
+    return view('append', ['name' => 'taufiq hidayah abdullah', 'blogs' => $blogs]);
 });
