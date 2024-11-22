@@ -296,7 +296,7 @@
               // Deteksi apakah layar berukuran mobile
               if (window.matchMedia("(max-width: 768px)").matches) {
                   // Mobile
-                  chart.config.scaleInitial = 0.5; // Scale lebih kecil
+                  chart.config.scaleInitial = 0.45; // Scale lebih kecil
               } else {
                   // Desktop
                   chart.config.scaleInitial = 0.7; // Scale lebih besar
