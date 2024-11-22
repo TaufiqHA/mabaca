@@ -2864,3 +2864,15 @@ section,
   color: color-mix(in srgb, var(--default-color), transparent 60%);
   font-size: 14px;
 }
+
+/* optional */
+
+#tree {
+  pointer-events: none; /* Default untuk mobile */
+}
+
+@media (min-width: 768px) {
+  #tree {
+      pointer-events: auto; /* Aktifkan interaksi untuk desktop */
+  }
+}

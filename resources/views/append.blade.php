@@ -310,6 +310,7 @@
               scaleInitial: 0.7,
               enableSearch: false,
               enableDragDrop: false,
+              editForm: {readOnly: true},
               nodeBinding: {
                   field_0: "name",
                   field_1: "title",
@@ -323,7 +324,7 @@
                   { id: "5", pid: "2", tags: ["IT"], name: "Blake Morris", title: "Senior Developer", img: "https://cdn.balkan.app/shared/5.jpg" },
                   { id: "6", pid: "3", tags: ["Marketing"], name: "Erin Grant", title: "Junior Marketing", img: "https://cdn.balkan.app/shared/6.jpg" },
                   { id: "7", pid: "4", tags: ["Marketing"], name: "Avery Hughes", title: "Senior MArketing", img: "https://cdn.balkan.app/shared/7.jpg" },
-                  { id: "8", pid: "7", tags: ["Marketing"], name: "Erin Grant", title: "Junior Marketing", img: "https://cdn.balkan.app/shared/6.jpg" },
+                  { id: "8", pid: "5", tags: ["Marketing"], name: "Erin Grant", title: "Junior Marketing", img: "https://cdn.balkan.app/shared/6.jpg" },
                   { id: "9", pid: "6", tags: ["Marketing"], name: "Avery Hughes", title: "Senior MArketing", img: "https://cdn.balkan.app/shared/7.jpg" }
 
               ]
