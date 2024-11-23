@@ -51,14 +51,14 @@
 
       <nav id="navmenu" class="navmenu">
         <ul>
-          <li><a href="/append#hero" class="active">Beranda</a></li>
-          <li><a href="/append#about">Tentang</a></li>
-          <li><a href="/append#layanan">Layanan</a></li>
-          <li><a href="/append#gallery">Gallery</a></li>
-          <li><a href="/append#organisasi">Organisasi</a></li>
-          <li><a href="/append#pustakawan">Pustakawan</a></li>
-          <li><a href="/append#blog">Blog</a></li>
-          <li><a href="/append#kontak">Kontak</a></li>
+          <li><a href="/#hero" class="active">Beranda</a></li>
+          <li><a href="/#about">Tentang</a></li>
+          <li><a href="/#layanan">Layanan</a></li>
+          <li><a href="/#gallery">Gallery</a></li>
+          <li><a href="/#organisasi">Organisasi</a></li>
+          <li><a href="/#pustakawan">Pustakawan</a></li>
+          <li><a href="/#blog">Blog</a></li>
+          <li><a href="/#kontak">Kontak</a></li>
         </ul>
         <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
       </nav>
@@ -125,14 +125,14 @@
         <div class="col-lg-3 col-6 footer-links">
           <h4>Useful Links</h4>
           <ul>
-            <li><a href="#hero" class="active">Beranda</a></li>
-            <li><a href="#about">Tentang</a></li>
-            <li><a href="#layanan">Layanan</a></li>
-            <li><a href="#gallery">Gallery</a></li>
-            <li><a href="#organisasi">Organisasi</a></li>
-            <li><a href="#pustakawan">Pustakawan</a></li>
-            <li><a href="#blog">Blog</a></li>
-            <li><a href="#kontak">Kontak</a></li>
+            <li><a href="/#hero" class="active">Beranda</a></li>
+            <li><a href="/#about">Tentang</a></li>
+            <li><a href="/#layanan">Layanan</a></li>
+            <li><a href="/#gallery">Gallery</a></li>
+            <li><a href="/#organisasi">Organisasi</a></li>
+            <li><a href="/#pustakawan">Pustakawan</a></li>
+            <li><a href="/#blog">Blog</a></li>
+            <li><a href="/#kontak">Kontak</a></li>
           </ul>
         </div>
 
