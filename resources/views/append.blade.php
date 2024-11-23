@@ -36,7 +36,7 @@
   {{-- js file --}}
   <script src="https://balkan.app/js/OrgChart.js"></script>
 
-  {{-- @vite(['assets3/css/main.css']) --}}
+  @vite(['assets3/css/main.css'])
 
   <!-- =======================================================
   * Template Name: Append
@@ -229,47 +229,15 @@
 
           <div class="row gy-4 isotope-container" data-aos="fade-up" data-aos-delay="200">
 
-            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-app">
-              <img src="{{ asset('img/kegiatan/kegiatan  (1).jpeg') }}" class="img-fluid" alt="">
-              <div class="portfolio-info">
-                <p>Duta baca perpustakaan Mabaca Manennungeng</p>
-              </div>
-            </div><!-- End Portfolio Item -->
+            @foreach ($galleries as $gallery)
+              <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-app">
+                <img src="{{ asset('storage/'.$gallery->gambar) }}" class="img-fluid" alt="">
+                <div class="portfolio-info">
+                  <p>{{ $gallery->deskripsi }}</p>
+                </div>
+              </div><!-- End Portfolio Item -->
+            @endforeach
 
-            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-app">
-              <img src="{{ asset('img/kegiatan/kegiatan  (2).jpeg') }}" class="img-fluid" alt="">
-              <div class="portfolio-info">
-                <p>Foto bersama tim asesor akreditasi perpustakaan</p>
-              </div>
-            </div><!-- End Portfolio Item -->
-
-            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-app">
-              <img src="{{ asset('img/kegiatan/kegiatan  (3).jpeg') }}" class="img-fluid" alt="">
-              <div class="portfolio-info">
-                <p>Survey kebutuhan pemustaka oleh pustakawan</p>
-              </div>
-            </div><!-- End Portfolio Item -->
-
-            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-app">
-              <img src="{{ asset('img/kegiatan/kegiatan  (4).jpeg') }}" class="img-fluid" alt="">
-              <div class="portfolio-info">
-                <p>Peningkatan pendamping Literasi perpustakaan sekolah/madrasah</p>
-              </div>
-            </div><!-- End Portfolio Item -->
-
-            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-app">
-              <img src="{{ asset('img/kegiatan/kegiatan  (5).jpeg') }}" class="img-fluid" alt="">
-              <div class="portfolio-info">
-                <p>Penyerahan sertifikat penghargaan oleh dinas perpustakaan kota Makassar</p>
-              </div>
-            </div><!-- End Portfolio Item -->
-
-            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-app">
-              <img src="{{ asset('img/kegiatan/kegiatan  (6).jpeg') }}" class="img-fluid" alt="">
-              <div class="portfolio-info">
-                <p>Workshop Akreditasi perpustakaan tahun 2024</p>
-              </div>
-            </div><!-- End Portfolio Item -->
 
           </div><!-- End Portfolio Container -->
 
@@ -303,14 +271,96 @@
                   chart.config.scaleInitial = 0.45; // Scale lebih kecil
               } else {
                   // Desktop
-                  chart.config.scaleInitial = 0.7; // Scale lebih besar
+                  chart.config.scaleInitial = 0.8; // Scale lebih besar
               }
 
               // Refresh chart untuk menerapkan perubahan
               chart.draw();
           }
+          OrgChart.templates.ana.defs = "";
+
+          OrgChart.templates.ana.size = [250, 120];
+
+          OrgChart.templates.ana.linkAdjuster = {
+              fromX: 0,
+              fromY: 0,
+              toX: 0,
+              toY: 0
+          };
+
+          OrgChart.templates.ana.ripple = {
+              radius: 0,
+              color: "#e6e6e6",
+              rect: null
+          };
+
+          OrgChart.templates.ana.svg = 
+              `<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" 
+                  style="display:block;" width="{w}" height="{h}" viewBox="{viewBox}">{content}
+              </svg>`;
+
+          OrgChart.templates.ana.node = 
+              `<rect x="0" y="0" height="{h}" width="{w}" fill="#039BE5" stroke-width="1" stroke="#aeaeae" rx="7" ry="7"></rect>`;
+
+          OrgChart.templates.ana.link = 
+              `<path stroke-linejoin="round" stroke="#aeaeae" stroke-width="1px" fill="none" d="{rounded}" />`;
+
+          OrgChart.templates.ana.assistanseLink = 
+              `<path stroke-linejoin="round" stroke="#aeaeae" stroke-width="2px" fill="none" 
+              d="M{xa},{ya} {xb},{yb} {xc},{yc} {xd},{yd} L{xe},{ye}" />`;
+
+          OrgChart.templates.ana.pointer = 
+              `<g data-pointer="pointer" transform="matrix(0,0,0,0,100,100)">
+                  <radialGradient id="pointerGradient">
+                      <stop stop-color="#ffffff" offset="0" />
+                      <stop stop-color="#C1C1C1" offset="1" />
+                  </radialGradient>
+                  <circle cx="16" cy="16" r="16" stroke-width="1" stroke="#acacac" fill="url(#pointerGradient)"></circle>
+              </g>`;
+
+          OrgChart.templates.ana.expandCollapseSize = 30;
+          OrgChart.templates.ana.plus = 
+              `<circle cx="15" cy="15" r="15" fill="#ffffff" stroke="#aeaeae" stroke-width="1"></circle>
+              <line x1="4" y1="15" x2="26" y2="15" stroke-width="1" stroke="#aeaeae"></line>
+              <line x1="15" y1="4" x2="15" y2="26" stroke-width="1" stroke="#aeaeae"></line>`; 
+          OrgChart.templates.ana.minus = 
+              `<circle cx="15" cy="15" r="15" fill="#ffffff" stroke="#aeaeae" stroke-width="1"></circle>
+              <line x1="4" y1="15" x2="26" y2="15" stroke-width="1" stroke="#aeaeae"></line>`;
+
+          OrgChart.templates.ana.nodeMenuButton = 
+              `<g style="cursor:pointer;" transform="matrix(1,0,0,1,225,105)" data-ctrl-n-menu-id="{id}">
+                  <rect x="-4" y="-10" fill="#000000" fill-opacity="0" width="22" height="22"></rect>
+                  <circle cx="0" cy="0" r="2" fill="#ffffff"></circle>
+                  <circle cx="7" cy="0" r="2" fill="#ffffff"></circle><circle cx="14" cy="0" r="2" fill="#ffffff"></circle>
+              </g>`;
+
+          OrgChart.templates.ana.menuButton = 
+              `<div style="position:absolute;right:{p}px;top:{p}px; width:40px;height:50px;cursor:pointer;" data-ctrl-menu="">
+                  <hr style="background-color: #7A7A7A; height: 3px; border: none;">
+                  <hr style="background-color: #7A7A7A; height: 3px; border: none;">
+                  <hr style="background-color: #7A7A7A; height: 3px; border: none;">
+              </div>`;
+
+          OrgChart.templates.ana.img_0 = 
+              `<clipPath id="{randId}"><circle cx="50" cy="30" r="40"></circle></clipPath>
+              <image preserveAspectRatio="xMidYMid slice" clip-path="url(#{randId})" xlink:href="{val}" x="10" y="-10" width="80" height="80">
+              </image>`;
+
+          OrgChart.templates.ana.field_0 = 
+              `<text data-width="230" style="font-size: 13px;" fill="#ffffff" x="125" y="95" text-anchor="middle">{val}</text>`;
+          OrgChart.templates.ana.field_1 = 
+              `<text data-width="130" data-text-overflow="multiline" style="font-size: 14px;" fill="#ffffff" x="230" y="30" text-anchor="end">
+                  {val}
+              </text>`;
+
+          OrgChart.templates.ana.link_field_0 = 
+              `<text text-anchor="middle" fill="#aeaeae" data-width="290" x="0" y="0" style="font-size:10px;">{val}</text>`;
+
+          OrgChart.templates.ana.padding = [50, 20, 35, 20];
           var chart = new OrgChart(document.getElementById("tree"), {
               mouseScrool: OrgChart.action.none,
+              scaleInitial: OrgChart.match.width,
+              template: "ana",
               scaleInitial: 0.7,
               enableSearch: false,
               enableDragDrop: false,
@@ -321,16 +371,9 @@
                   img_0: "img"
               },
               nodes: [
-                  { id: "1", pid: '', name: `{{ $name }}`, title: "CEO", img: "https://cdn.balkan.app/shared/1.jpg" },
-                  { id: "2", pid: "1", tags: ["IT Manager"], name: "Ava Field", title: "IT Manager", img: "https://cdn.balkan.app/shared/2.jpg" },
-                  { id: "3", pid: "2", tags: ["Marketing Manager"], name: "Rhys Harper", title: "Marketing Team Lead", img: "https://cdn.balkan.app/shared/3.jpg" },
-                  { id: "4", pid: "2", tags: ["IT"], name: "Carol Foster", title: "Junior Developer", img: "https://cdn.balkan.app/shared/4.jpg" },
-                  { id: "5", pid: "2", tags: ["IT"], name: "Blake Morris", title: "Senior Developer", img: "https://cdn.balkan.app/shared/5.jpg" },
-                  { id: "6", pid: "3", tags: ["Marketing"], name: "Erin Grant", title: "Junior Marketing", img: "https://cdn.balkan.app/shared/6.jpg" },
-                  { id: "7", pid: "4", tags: ["Marketing"], name: "Avery Hughes", title: "Senior MArketing", img: "https://cdn.balkan.app/shared/7.jpg" },
-                  { id: "8", pid: "5", tags: ["Marketing"], name: "Erin Grant", title: "Junior Marketing", img: "https://cdn.balkan.app/shared/6.jpg" },
-                  { id: "9", pid: "6", tags: ["Marketing"], name: "Avery Hughes", title: "Senior MArketing", img: "https://cdn.balkan.app/shared/7.jpg" }
-
+                @foreach ($organisasi as $bagan)
+                  { id: "{{ $bagan->id }}", pid: "{{ $bagan->pid }}", name: "{{ $bagan->name }}", title: "{{ $bagan->title }}", img: "{{ $bagan->image ?? asset('img/user.jpg') }}" },
+                @endforeach
               ]
           });
 
@@ -358,65 +401,18 @@
 
         <div class="row gy-5">
 
-          <div class="col-lg-4 col-md-6 member" data-aos="fade-up" data-aos-delay="100">
-            <div class="member-img">
-              <img src="assets3/img/team/team-1.jpg" class="img-fluid" alt="">
-            </div>
-            <div class="member-info text-center">
-              <h4>Walter White</h4>
-              <span>Chief Executive Officer</span>
-            </div>
-          </div><!-- End Team Member -->
+          @foreach ($pustakawan as $pustaka)
+            <div class="col-lg-4 col-md-6 member" data-aos="fade-up" data-aos-delay="100">
+              <div class="member-img">
+                <img src="{{ $pustaka->image ? asset('storage/'.$pustaka->image) : asset('img/user.jpg') }}" class="img-fluid" alt="">
+              </div>
+              <div class="member-info text-center">
+                <h4>{{ $pustaka->name }}</h4>
+                <span>{{ $pustaka->deskripsi }}</span>
+              </div>
+            </div><!-- End Team Member -->
+          @endforeach
 
-          <div class="col-lg-4 col-md-6 member" data-aos="fade-up" data-aos-delay="200">
-            <div class="member-img">
-              <img src="assets3/img/team/team-2.jpg" class="img-fluid" alt="">
-            </div>
-            <div class="member-info text-center">
-              <h4>Sarah Jhonson</h4>
-              <span>Product Manager</span>
-            </div>
-          </div><!-- End Team Member -->
-
-          <div class="col-lg-4 col-md-6 member" data-aos="fade-up" data-aos-delay="300">
-            <div class="member-img">
-              <img src="assets3/img/team/team-3.jpg" class="img-fluid" alt="">
-            </div>
-            <div class="member-info text-center">
-              <h4>William Anderson</h4>
-              <span>CTO</span>
-            </div>
-          </div><!-- End Team Member -->
-
-          <div class="col-lg-4 col-md-6 member" data-aos="fade-up" data-aos-delay="400">
-            <div class="member-img">
-              <img src="assets3/img/team/team-4.jpg" class="img-fluid" alt="">
-            </div>
-            <div class="member-info text-center">
-              <h4>Amanda Jepson</h4>
-              <span>Accountant</span>
-            </div>
-          </div><!-- End Team Member -->
-
-          <div class="col-lg-4 col-md-6 member" data-aos="fade-up" data-aos-delay="500">
-            <div class="member-img">
-              <img src="assets3/img/team/team-5.jpg" class="img-fluid" alt="">
-            </div>
-            <div class="member-info text-center">
-              <h4>Brian Doe</h4>
-              <span>Marketing</span>
-            </div>
-          </div><!-- End Team Member -->
-
-          <div class="col-lg-4 col-md-6 member" data-aos="fade-up" data-aos-delay="600">
-            <div class="member-img">
-              <img src="assets3/img/team/team-6.jpg" class="img-fluid" alt="">
-            </div>
-            <div class="member-info text-center">
-              <h4>Josepha Palas</h4>
-              <span>Operation</span>
-            </div>
-          </div><!-- End Team Member -->
 
         </div>
 

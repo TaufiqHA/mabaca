@@ -52,10 +52,12 @@
           <li><a href="/#hero">Beranda</a></li>
           <li><a href="/#about">Tentang</a></li>
           <li><a href="/#services">Layanan</a></li>
+          <li><a href="/#gallery">Gallery</a></li>
           <li><a href="/#pricing">Organisasi</a></li>
+          <li><a href="/#pustakawan">Pustakawan</a></li>
           <!-- <li><a href="#faq">FAQ</a></li> -->
-          <li><a href="/#contact">Kontak</a></li>
           <li><a href="/blog" class="active">Blog</a></li>
+          <li><a href="/#kontak">Kontak</a></li>
         </ul>
         <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
       </nav>
@@ -126,12 +128,15 @@
         <div class="col-lg-3 col-md-3 footer-links">
           <h4>Tautan Berguna</h4>
           <ul>
-            <li><a href="#hero">Beranda</a></li>
-            <li><a href="#about">Tentang</a></li>
-            <li><a href="#services">Layanan</a></li>
-            <li><a href="#pricing">Organisasi</a></li>
+            <li><a href="/#hero">Beranda</a></li>
+            <li><a href="/#about">Tentang</a></li>
+            <li><a href="/#services">Layanan</a></li>
+            <li><a href="/#gallery">Gallery</a></li>
+            <li><a href="/#pricing">Organisasi</a></li>
+            <li><a href="/#pustakawan">Pustakawan</a></li>
             <!-- <li><a href="#faq">FAQ</a></li> -->
-            <li><a href="#contact">Kontak</a></li>
+            <li><a href="/blog" class="active">Blog</a></li>
+            <li><a href="/#kontak">Kontak</a></li>
           </ul>
         </div>
 

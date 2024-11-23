@@ -1,6 +1,11 @@
 {
+  "public/assets3/css/main.css": {
+    "file": "assets/main-tvCEDuyF.css",
+    "src": "public/assets3/css/main.css",
+    "isEntry": true
+  },
   "resources/css/app.css": {
-    "file": "assets/app-BwuoCp9P.css",
+    "file": "assets/app-BnV1y55w.css",
     "src": "resources/css/app.css",
     "isEntry": true
   },

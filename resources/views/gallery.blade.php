@@ -27,7 +27,7 @@
   <!-- Main CSS File -->
   <link href="{{ asset('assets3/css/main.css') }}" rel="stylesheet">
 
-  {{-- @vite(['assets3/css/main.css']) --}}
+  @vite(['assets3/css/main.css'])
 
   <!-- =======================================================
   * Template Name: Append
@@ -84,47 +84,15 @@
 
           <div class="row gy-4 isotope-container" data-aos="fade-up" data-aos-delay="200">
 
-            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-app">
-              <img src="{{ asset('img/kegiatan/kegiatan  (1).jpeg') }}" class="img-fluid" alt="">
-              <div class="portfolio-info">
-                <p>Duta baca perpustakaan Mabaca Manennungeng</p>
-              </div>
-            </div><!-- End Portfolio Item -->
+            @foreach ($galleries as $gallery)
+              <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-app">
+                <img src="{{ asset('storage/'.$gallery->gambar) }}" class="img-fluid" alt="">
+                <div class="portfolio-info">
+                  <p>{{ $gallery->deskripsi }}</p>
+                </div>
+              </div><!-- End Portfolio Item -->
+            @endforeach
 
-            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-app">
-              <img src="{{ asset('img/kegiatan/kegiatan  (2).jpeg') }}" class="img-fluid" alt="">
-              <div class="portfolio-info">
-                <p>Foto bersama tim asesor akreditasi perpustakaan</p>
-              </div>
-            </div><!-- End Portfolio Item -->
-
-            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-app">
-              <img src="{{ asset('img/kegiatan/kegiatan  (3).jpeg') }}" class="img-fluid" alt="">
-              <div class="portfolio-info">
-                <p>Survey kebutuhan pemustaka oleh pustakawan</p>
-              </div>
-            </div><!-- End Portfolio Item -->
-
-            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-app">
-              <img src="{{ asset('img/kegiatan/kegiatan  (4).jpeg') }}" class="img-fluid" alt="">
-              <div class="portfolio-info">
-                <p>Peningkatan pendamping Literasi perpustakaan sekolah/madrasah</p>
-              </div>
-            </div><!-- End Portfolio Item -->
-
-            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-app">
-              <img src="{{ asset('img/kegiatan/kegiatan  (5).jpeg') }}" class="img-fluid" alt="">
-              <div class="portfolio-info">
-                <p>Penyerahan sertifikat penghargaan oleh dinas perpustakaan kota Makassar</p>
-              </div>
-            </div><!-- End Portfolio Item -->
-
-            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-app">
-              <img src="{{ asset('img/kegiatan/kegiatan  (6).jpeg') }}" class="img-fluid" alt="">
-              <div class="portfolio-info">
-                <p>Workshop Akreditasi perpustakaan tahun 2024</p>
-              </div>
-            </div><!-- End Portfolio Item -->
 
           </div><!-- End Portfolio Container -->
 
