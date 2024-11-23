@@ -27,7 +27,7 @@
   <!-- Main CSS File -->
   <link href="{{ asset('assets3/css/main.css') }}" rel="stylesheet">
 
-  @vite(['assets3/css/main.css'])
+  {{-- @vite(['assets3/css/main.css']) --}}
 
   <!-- =======================================================
   * Template Name: Append
