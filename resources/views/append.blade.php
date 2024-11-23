@@ -82,7 +82,7 @@
     <!-- Hero Section -->
     <section id="hero" class="hero section dark-background">
 
-      <img src="{{ asset($data->hero_image) }}" alt="" data-aos="fade-in">
+      <img src="{{ asset('storage/'.$data->hero_image) }}" alt="" data-aos="fade-in">
 
       <div class="container">
         <div class="row">
@@ -116,25 +116,25 @@
 
               <div class="col-md-6" data-aos="fade-up" data-aos-delay="200">
                 <div class="icon-box">
-                  <img src="{{ asset($data->about_img_1) }}" class="img-fluid" alt="galery 1">
+                  <img src="{{ asset('storage/'.$data->about_img_1) }}" class="img-fluid" alt="galery 1">
                 </div>
               </div> <!-- End Icon Box -->
 
               <div class="col-md-6" data-aos="fade-up" data-aos-delay="300">
                 <div class="icon-box">
-                  <img src="{{ asset($data->about_img_2) }}" class="img-fluid" alt="galery 1">
+                  <img src="{{ asset('storage/'.$data->about_img_2) }}" class="img-fluid" alt="galery 1">
                 </div>
               </div> <!-- End Icon Box -->
 
               <div class="col-md-6" data-aos="fade-up" data-aos-delay="400">
                 <div class="icon-box">
-                  <img src="{{ asset($data->about_img_3) }}" class="img-fluid" alt="galery 1">
+                  <img src="{{ asset('storage/'.$data->about_img_3) }}" class="img-fluid" alt="galery 1">
                 </div>
               </div> <!-- End Icon Box -->
 
               <div class="col-md-6" data-aos="fade-up" data-aos-delay="500">
                 <div class="icon-box">
-                  <img src="{{ asset($data->about_img_4) }}" class="img-fluid" alt="galery 1">
+                  <img src="{{ asset('storage/'.$data->about_img_4) }}" class="img-fluid" alt="galery 1">
                 </div>
               </div> <!-- End Icon Box -->
 
