@@ -1,6 +1,7 @@
 <?php
 
 use App\Models\Blog;
+use App\Models\Homepage;
 use Illuminate\Support\Facades\Route;
 use Ramsey\Uuid\Type\Integer;
 
@@ -20,6 +21,11 @@ Route::get('/blog-detail/{id}', function ($id) {
 })->name('blog');
 
 Route::get('/append', function () {
+    $data = Homepage::first();
     $blogs = Blog::limit(3)->orderBy('created_at', 'desc')->get();
-    return view('append', ['name' => 'taufiq hidayah abdullah', 'blogs' => $blogs]);
+    return view('append', ['name' => 'taufiq hidayah abdullah', 'blogs' => $blogs, 'data' => $data]);
+});
+
+Route::get('/gallery', function () {
+    return view('gallery');
 });

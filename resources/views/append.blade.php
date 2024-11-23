@@ -4,7 +4,7 @@
 <head>
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
-  <title>Home - Perpustakaan Mabaca Manneunungeng</title>
+  <title>Beranda - Perpustakaan Mabaca Manneunungeng</title>
   <meta name="description" content="">
   <meta name="keywords" content="">
 
@@ -36,7 +36,7 @@
   {{-- js file --}}
   <script src="https://balkan.app/js/OrgChart.js"></script>
 
-  {{-- @vite(['assets3/css/main.css']) --}}
+  @vite(['assets3/css/main.css'])
 
   <!-- =======================================================
   * Template Name: Append
@@ -82,7 +82,7 @@
     <!-- Hero Section -->
     <section id="hero" class="hero section dark-background">
 
-      <img src="{{ asset('img/hero image.jpeg') }}" alt="" data-aos="fade-in">
+      <img src="{{ asset($data->hero_image) }}" alt="" data-aos="fade-in">
 
       <div class="container">
         <div class="row">
@@ -108,7 +108,7 @@
           <div class="col-xl-5 content">
             <h3>Tentang Kami</h3>
             <h2>Perpustakaan Mabaca Mannenungeng</h2>
-            <p>Perpustakaan Mabaca Manennungeng UPT SPF SMP NEGERI 9 Makassar berdiri sejak tahun 1999, Dengan nomor pokok perpustakaan (NPP) 7371111D1000004 dan menempati gedung tersendiri seluas 359,12 m2. Perpustakaan di UPT SPF SMPN 9 Makassar memiliki fasilitas yang cukup memadai antara lain Ac, Televisi, Layar proyektor, Komputer, LCD, Kipas angin, Printer dan Foto copy. Adapun jenis koleksinya sebanyak 3.000 Judul dan 4.230 Eksemplar yaitu terdiri dari buku paket, buku fiksi dan non fiksi, referensi dan digital. Struktur organisasi perpustakaan UPT SPF SMPN 9 Makassar antara lain : terdiri dari Kepala sekolah, kepala perpustakaan, Pelayanan teknis, Pelayanan pemustaka, dan TIK.</p>
+            <p>{!! $data->about !!}</p>
           </div>
 
           <div class="col-xl-7">
@@ -116,25 +116,25 @@
 
               <div class="col-md-6" data-aos="fade-up" data-aos-delay="200">
                 <div class="icon-box">
-                  <img src="{{ asset('img/galery1.jpeg') }}" class="img-fluid" alt="galery 1">
+                  <img src="{{ asset($data->about_img_1) }}" class="img-fluid" alt="galery 1">
                 </div>
               </div> <!-- End Icon Box -->
 
               <div class="col-md-6" data-aos="fade-up" data-aos-delay="300">
                 <div class="icon-box">
-                  <img src="{{ asset('img/galery4.jpeg') }}" class="img-fluid" alt="galery 1">
+                  <img src="{{ asset($data->about_img_2) }}" class="img-fluid" alt="galery 1">
                 </div>
               </div> <!-- End Icon Box -->
 
               <div class="col-md-6" data-aos="fade-up" data-aos-delay="400">
                 <div class="icon-box">
-                  <img src="{{ asset('img/galery2.jpeg') }}" class="img-fluid" alt="galery 1">
+                  <img src="{{ asset($data->about_img_3) }}" class="img-fluid" alt="galery 1">
                 </div>
               </div> <!-- End Icon Box -->
 
               <div class="col-md-6" data-aos="fade-up" data-aos-delay="500">
                 <div class="icon-box">
-                  <img src="{{ asset('img/galery3.jpeg') }}" class="img-fluid" alt="galery 1">
+                  <img src="{{ asset($data->about_img_4) }}" class="img-fluid" alt="galery 1">
                 </div>
               </div> <!-- End Icon Box -->
 
@@ -157,14 +157,14 @@
 
           <div class="col-lg-6 col-md-6">
             <div class="stats-item text-center w-100 h-100">
-              <span data-purecounter-start="0" data-purecounter-end="3000" data-purecounter-duration="1" class="purecounter"></span>
+              <span data-purecounter-start="0" data-purecounter-end="{{ $data->judul }}" data-purecounter-duration="1" class="purecounter"></span>
               <p>Judul</p>
             </div>
           </div><!-- End Stats Item -->
 
           <div class="col-lg-6 col-md-6">
             <div class="stats-item text-center w-100 h-100">
-              <span data-purecounter-start="0" data-purecounter-end="4230" data-purecounter-duration="1" class="purecounter"></span>
+              <span data-purecounter-start="0" data-purecounter-end="{{ $data->eksempler }}" data-purecounter-duration="1" class="purecounter"></span>
               <p>Eksemplar</p>
             </div>
           </div><!-- End Stats Item -->
@@ -272,6 +272,10 @@
             </div><!-- End Portfolio Item -->
 
           </div><!-- End Portfolio Container -->
+
+          <div class="d-grid gap-2 col-6 mx-auto">
+            <a href="/gallery" type="button" class="btn btn-outline-primary mt-5" style="outline: var(--accent-color); --bs-btn-padding-x: 10px; ">Lainnya <i class="bi bi-arrow-right"></i></a>
+          </div>
 
         </div>
 
@@ -480,7 +484,7 @@
                 <div class="info-item" data-aos="fade-up" data-aos-delay="200">
                   <i class="bi bi-geo-alt"></i>
                   <h3>Alamat</h3>
-                  <p>Jl. Ir. Soetami No.26 Bulurokeng Makassar</p>
+                  <p>{!! $data->alamat !!}</p>
                 </div>
               </div><!-- End Info Item -->
 
@@ -488,7 +492,7 @@
                 <div class="info-item" data-aos="fade-up" data-aos-delay="300">
                   <i class="bi bi-telephone"></i>
                   <h3>Telepon</h3>
-                  <p>0822-9272-4200</p>
+                  <p>{{ $data->telepon }}</p>
                 </div>
               </div><!-- End Info Item -->
 
@@ -496,7 +500,7 @@
                 <div class="info-item" data-aos="fade-up" data-aos-delay="400">
                   <i class="bi bi-envelope"></i>
                   <h3>Email</h3>
-                  <p>perpussmpn9mks@gmail.com</p>
+                  <p>{{ $data->email }}</p>
                 </div>
               </div><!-- End Info Item -->
 
@@ -504,7 +508,7 @@
                 <div class="info-item" data-aos="fade-up" data-aos-delay="500">
                   <i class="bi bi-clock"></i>
                   <h3>Jam buka</h3>
-                  <p>Senin-Jum’at = 07:00-16:00</p>
+                  <p>Senin-Jum’at = {{ $data->jam_buka }}</p>
                 </div>
               </div><!-- End Info Item -->
 
