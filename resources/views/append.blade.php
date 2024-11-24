@@ -534,10 +534,9 @@
           </a>
           <p>Kami menyediakan beragam informasi untuk warga UPT SPF SMPN 9 Makassar. Terus update kegiatan - kegiatan kami di media sosial. </p>
           <div class="social-links d-flex mt-4">
-            <a href=""><i class="bi bi-twitter-x"></i></a>
-            <a href=""><i class="bi bi-facebook"></i></a>
-            <a href=""><i class="bi bi-instagram"></i></a>
-            <a href=""><i class="bi bi-linkedin"></i></a>
+            <a href="{{ $data->facebook }}" target="_blank"><i class="bi bi-facebook"></i></a>
+            <a href="{{ $data->instagram }}" target="_blank"><i class="bi bi-instagram"></i></a>
+            <a href="{{ $data->tiktok }}" target="_blank"><i class="bi bi-tiktok"></i></a>
           </div>
         </div>
 

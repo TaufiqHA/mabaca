@@ -48,6 +48,9 @@ class Settings extends Page implements HasForms
                 TextInput::make('email'),
                 TextInput::make('telepon'),
                 TextInput::make('jam_buka'),
+                TextInput::make('facebook'),
+                TextInput::make('instagram'),
+                TextInput::make('tiktok'),
             ])
             ->statePath('data');
     } 
