@@ -192,7 +192,7 @@
             <div class="service-item d-flex">
               <div class="icon flex-shrink-0"><i class="bi bi-collection"></i></div>
               <div>
-                <h4 class="title"><a href="https://smpn9makassar.perpustakaan.co.id/" class="stretched-link">Perpustakaan Digital</a></h4>
+                <h4 class="title"><a href="https://smpn9makassar.perpustakaan.co.id/" class="stretched-link" target="_blank" >Perpustakaan Digital</a></h4>
                 <p class="description">Masuk ke laman Perpustakaan Digital UPT SPF SMPN 9 Makassar untuk melakukan pencarian koleksi - koleksi perpustakaan</p>
               </div>
             </div>
@@ -203,7 +203,7 @@
             <div class="service-item d-flex">
               <div class="icon flex-shrink-0"><i class="bi bi-book"></i></div>
               <div>
-                <h4 class="title"><a href="https://opac-smpn9makassar.site/" class="stretched-link">OPAC</a></h4>
+                <h4 class="title"><a href="https://opac-smpn9makassar.site/" class="stretched-link" target="_blank" >OPAC</a></h4>
                 <p class="description">Layanan Peminjaman, Perpanjangan, dan Pengembalian koleksi bahan pustaka</p>
               </div>
             </div>
