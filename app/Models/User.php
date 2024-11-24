@@ -51,7 +51,7 @@ class User extends Authenticatable
     public function canAccessPanel(Panel $panel): bool
     {
         if($panel->getId() === 'admin') {
-            if(Auth::user()) {
+            if(Auth::check()) {
                 return true;
             } else {
                 return false;
