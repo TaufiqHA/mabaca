@@ -148,9 +148,9 @@
             </p>
           </div>
           <div class="social-links d-flex mt-4">
-            <a href="https://www.facebook.com/share/128qXA64cqp/?mibextid=LQQJ4d"><i class="bi bi-facebook"></i></a>
-            <a href="https://www.instagram.com/mabacamanennungengsmp9mks?igsh=MTExN2tnbjEwODBtZw%3D%3D&utm_source=qr"><i class="bi bi-instagram"></i></a>
-            <a href="https://www.tiktok.com/@perpussmpn9mks?_t=8rT4RwKhTDJ&_r=1"><i class="bi bi-tiktok"></i></a>
+            <a href="{{ $data->facebook }}" target="_blank"><i class="bi bi-facebook"></i></a>
+            <a href="{{ $data->instagram }}" target="_blank"><i class="bi bi-instagram"></i></a>
+            <a href="{{ $data->tiktok }}" target="_blank"><i class="bi bi-tiktok"></i></a>
           </div>
         </div>
 

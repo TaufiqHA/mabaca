@@ -14,13 +14,15 @@ Route::get('/ilanding', function () {
 
 Route::get('/blog', function () {
     $blogs = Blog::all();
-    return view('blog', ['blogs' => $blogs]);
+    $data = Homepage::first();
+    return view('blog', ['blogs' => $blogs, 'data' => $data]);
 });
 
 Route::get('/blog-detail/{id}', function ($id) {
     $blog = Blog::where('id', $id)->first();
     $blogs = Blog::limit(5)->get();
-    return view('blog-details', ['blog' => $blog, 'blogs' => $blogs]);
+    $data = Homepage::first();
+    return view('blog-details', ['blog' => $blog, 'blogs' => $blogs, 'data' => $data]);
 })->name('blog');
 
 Route::get('/', function () {
@@ -34,5 +36,6 @@ Route::get('/', function () {
 
 Route::get('/gallery', function () {
     $galleries = Gallery::all();
-    return view('gallery', ['galleries' => $galleries]);
+    $data = Homepage::first();
+    return view('gallery', ['galleries' => $galleries, 'data' => $data]);
 });
